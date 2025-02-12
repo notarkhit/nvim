@@ -8,4 +8,5 @@ vim.opt.showmode = false
 vim.opt.undofile = true
 vim.opt.cursorline = true
 vim.opt.cmdheight = 0
+vim.opt.number = true
 vim.opt.termguicolors = true
