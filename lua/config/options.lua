@@ -24,6 +24,9 @@ vim.opt.updatetime = 250
 -- Displays which key popup sooner
 vim.opt.timeoutlen = 250
 
+-- minimal number pf screen lines to keep above and below the cursor
+vim.opt.scrolloff = 10
+
 -- configure how splits will be opened
 vim.opt.splitright = true
 vim.opt.splitbelow = true
@@ -39,3 +42,6 @@ vim.opt.inccommand = "split"
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
+
+-- Clear highlights on search when pressing <Esc> in normal mode
+vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
