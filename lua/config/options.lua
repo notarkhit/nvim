@@ -48,3 +48,18 @@ vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
 vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list"})
 
+-- set clipboard
+
+vim.opt.clipboard = "unnamedplus"
+vim.g.clipboard = {
+	name = "wl-clipboard",
+	copy = {
+		["+"] = "wl-copy",
+		["*"] = "wl-copy",
+	},
+	paste = {
+		["+"] = "wl-paste --no-newline",
+		["*"] = "wl-paste --no-newline",
+	},
+	cache_enabled = 0,
+}
