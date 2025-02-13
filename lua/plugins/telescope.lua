@@ -1,4 +1,8 @@
 return {
-    'nvim-telescope/telescope.nvim', brancg = '0.1.x',
-      dependencies = { 'nvim-lua/plenary.nvim' }
-    }
+	'nvim-telescope/telescope.nvim', brancg = '0.1.x',
+	dependencies = { 'nvim-lua/plenary.nvim' },
+
+	config = function()
+	nil
+	end
+}
