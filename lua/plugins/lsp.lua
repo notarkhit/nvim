@@ -20,9 +20,8 @@ return {
 	  "WhoIsSethDaniel/mason-tool-installer.nvim",
 	  { "j-hui/fidget.nvim", opts = {} },
 	  "hrsh7th/cmp-nvim-lsp",
-	}
+	},
+	config = function()
+	end
   },
-
-  config = function()
-  end
 }
