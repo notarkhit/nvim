@@ -75,8 +75,32 @@ return {
 				end, "[T]oggle Inlay [H]ints")
 			end
 		end,
-
   })
+
+  local capabilities = vim.lsp.protocol.make_client_capabilities()
+  capabilities = vim.tbl_deep_extend("force", capabilities, require("cmp_nvim_lsp").default_capabilities())
+
+  local servers = {
+	lua_ls = {
+	  Lua = {
+		runtime = {
+		  version = "LuaJIT",
+		  path = vim.split(package.path, ";"),
+		},
+		diagnostics = {
+		  enable = true,
+		  global = {"vim"},
+		},
+		workspace = {
+		  library = vim.api.nvim_get_runtime_file("", true),
+		  checkThirdParty = false,
+		},
+		telemetry = {
+		  enable = false,
+		},
+	  }
+	}
+  }
 
 	end
   },
