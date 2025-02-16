@@ -12,7 +12,7 @@ vim.opt.number = true
 vim.opt.termguicolors = true
 vim.opt.breakindent = true
 
--- case insensitive searching 
+-- case insensitive searching
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
@@ -46,7 +46,7 @@ vim.opt.shiftwidth = 4
 -- Clear highlights on search when pressing <Esc> in normal mode
 vim.keymap.set("n", "<Esc>", "<cmd>nohlsearch<CR>")
 
-vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list"})
+vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list" })
 
 -- set clipboard
 

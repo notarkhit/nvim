@@ -1,5 +1,4 @@
 return {
-    'ThePrimeagen/vim-be-good',
-    config = function()
-    end,
+	"ThePrimeagen/vim-be-good",
+	config = function() end,
 }
