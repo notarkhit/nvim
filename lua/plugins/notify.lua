@@ -13,7 +13,7 @@ return {
 			},
 			minimum_width = 50,
 			render = "default",
-			stages = "slide",
+			stages = "fade_in_slide_out",
 			timeout = 500,
 			merge_duplicates = true,
 			top_down = false,
