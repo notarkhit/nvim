@@ -4,7 +4,13 @@ return {
 		require("notify").setup({
 			background_colour = "NotifyBackground",
 			fps = 60,
-			icons = {},
+			icons = {
+				DEBUG = "",
+				ERROR = "",
+				INFO = "",
+				TRACE = "✎",
+				WARN = "",
+			},
 			minimum_width = 50,
 			render = "compact",
 			stages = "fade_in_slide_out",
