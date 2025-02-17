@@ -7,6 +7,9 @@ return {
 		require("tokyonight").setup({
 			style = "night",
 			transparent = true,
+			on_highlights = function(hl, colors)
+				hl.Comment = { fg = "#979baf" }
+			end,
 		})
 		-- load the colorscheme here
 		vim.cmd([[colorscheme tokyonight-night]])
