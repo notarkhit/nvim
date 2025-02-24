@@ -110,6 +110,7 @@ return {
 				"clangd",
 				"lua-language-server",
 				"bashls",
+				"ast-grep",
 				"hyprls",
 			})
 
