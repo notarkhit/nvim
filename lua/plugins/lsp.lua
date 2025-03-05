@@ -112,7 +112,7 @@ return {
 				"bashls",
 				"hyprls",
 				"emmet-ls",
-				"typescript-lannguage-server",
+				"typescript-language-server",
 				"css-lsp",
 			})
 
