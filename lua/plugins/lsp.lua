@@ -111,6 +111,7 @@ return {
 				"lua-language-server",
 				"bashls",
 				"hyprls",
+				"ast-grep",
 			})
 
 			require("mason-tool-installer").setup({
