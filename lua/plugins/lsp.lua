@@ -111,7 +111,9 @@ return {
 				"lua-language-server",
 				"bashls",
 				"hyprls",
-				"ast-grep",
+				"emmet-ls",
+				"typescript-lannguage-server",
+				"css-lsp",
 			})
 
 			require("mason-tool-installer").setup({
