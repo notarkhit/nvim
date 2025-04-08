@@ -2,6 +2,7 @@ return {
 
 	"hrsh7th/nvim-cmp",
 	event = "BufReadPre",
+	lazy = false,
 	dependencies = {
 		-- Snippet Engine & its associated nvim-cmp source
 		{
