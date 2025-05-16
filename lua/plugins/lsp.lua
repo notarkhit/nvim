@@ -114,6 +114,7 @@ return {
 				"emmet-ls",
 				"typescript-language-server",
 				"css-lsp",
+				"jdtls",
 			})
 
 			require("mason-tool-installer").setup({
