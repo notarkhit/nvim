@@ -32,6 +32,15 @@ return {
 		"hrsh7th/cmp-buffer",
 		"hrsh7th/cmp-path",
 		"hrsh7th/cmp-cmdline",
+		{
+			"folke/lazydev.nvim",
+			opts = {
+				library = {
+					vim.fn.stdpath("config") .. "/lua",
+				},
+				lspconfig = false,
+			}
+		},
 	},
 	config = function()
 		local cmp = require("cmp")
