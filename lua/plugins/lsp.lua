@@ -18,16 +18,15 @@ return {
 					"jdtls",
 					"rust_analyzer",
 				},
+				automatic_installation = true,
 			},
 		},
 		"hrsh7th/cmp-nvim-lsp",
-		{ "j-hui/fidget.nvim",    opts = {} }, -- optional status UI
+		{ "j-hui/fidget.nvim",    opts = {} },
 	},
 	config = function()
-		local lspconfig = require("lspconfig")
 		local capabilities = require("cmp_nvim_lsp").default_capabilities()
 
-		-- 🗝️ Common keymaps + behavior
 		local on_attach = function(_, bufnr)
 			local map = function(keys, func, desc)
 				vim.keymap.set("n", keys, func, { buffer = bufnr, desc = "LSP: " .. desc })
@@ -39,33 +38,18 @@ return {
 			map("<leader>ca", vim.lsp.buf.code_action, "[C]ode [A]ction")
 		end
 
-		-- 📦 Servers with optional custom settings
-		local servers = {
-			lua_ls = {
-				settings = {
-					Lua = {
-						diagnostics = { globals = { "vim" } },
-						workspace = { checkThirdParty = false },
-					},
+		vim.lsp.config("*", {
+			capabilities = capabilities,
+			on_attach = on_attach,
+		})
+
+		vim.lsp.config("lua_ls", {
+			settings = {
+				Lua = {
+					diagnostics = { globals = { "vim" } },
+					workspace = { checkThirdParty = false },
 				},
 			},
-			pyright = {},
-			ts_ls = {},
-			rust_analyzer = {},
-			clangd = {},
-			bashls = {},
-			cssls = {},
-			html = {},
-			emmet_ls = {},
-			jdtls = {},
-			hyprls = {},
-		}
-
-		--  Setup all servers
-		for name, opts in pairs(servers) do
-			opts.capabilities = capabilities
-			opts.on_attach = on_attach
-			lspconfig[name].setup(opts)
-		end
+		})
 	end,
 }
