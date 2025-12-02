@@ -17,6 +17,7 @@ return {
 					"cssls",
 					"jdtls",
 					"rust_analyzer",
+					"air",
 				},
 				automatic_installation = true,
 			},
