@@ -74,4 +74,6 @@ return {
 			"air",
 		})
 	end,
+
+	vim.lsp.enable("qmls"),
 }
